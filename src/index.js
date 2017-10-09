@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
 import App from './components/App';
 import registerServiceWorker from './js/registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom'
 
-import 'bootstrap/dist/css/bootstrap.css';
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
-global.jQuery = $;
-const bootstrap = require('bootstrap');
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'))
 
-ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

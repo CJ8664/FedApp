@@ -1,32 +1,23 @@
 import React, { Component } from 'react';
 import fire from '../js/fire';
 import logo from '../images/logo.svg';
+import Header from './views/Header'
+import Main from './views/Main'
+import Footer from './views/Footer'
+import 'bootstrap/dist/css/bootstrap.css';
+import { Switch, Route, Link } from 'react-router-dom'
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
+const bootstrap = require('bootstrap');
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-    		<div className="jumbotron text-center">
-    			<h1>Fed Day</h1>
-    			<p>Select the Time to see the projects</p>
-    		</div>
-        <div className="container">
-    			<div className="row">
-    				<div className="col-lg-6">
-                <div className="jumbotron text-center">
-    					    <a href="pages/morning"><h2>Morning</h2></a>
-                </div>
-    				</div>
-            <div className="col-lg-6">
-                <div className="jumbotron text-center">
-    					    <a href="pages/afternoon"><h2>Afternoon</h2></a>
-                </div>
-    				</div>
-    			</div>
-    		</div>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header />
+    <Main />
+    <Footer />
+  </div>
+)
 
-export default App;
+export default App
