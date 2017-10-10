@@ -2035,3 +2035,1315 @@ Compiled with warnings.
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unterminated JSX contents (12:8)
+
+  10 |       </div>
+  11 |     <div>
+> 12 |   </div>
+     |         ^
+  13 | )
+  14 | 
+  15 | export default Morning
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unterminated JSX contents (17:8)
+
+  15 |       </div>
+  16 |     <div>
+> 17 |   </div>
+     |         ^
+  18 | )
+  19 | 
+  20 | export default Morning
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unterminated JSX contents (17:8)
+
+  15 |       </div>
+  16 |     <div>
+> 17 |   </div>
+     |         ^
+  18 | )
+  19 | 
+  20 | export default Morning
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unterminated JSX contents (17:8)
+
+  15 |       </div>
+  16 |     <div>
+> 17 |   </div>
+     |         ^
+  18 | )
+  19 | 
+  20 | export default Morning
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+  Line 15:  'TeamList' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (15:1)
+
+  13 |     );
+  14 |   }
+> 15 | };
+     |  ^
+  16 |
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (16:0)
+
+  14 |   }
+  15 | }
+> 16 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (18:0)
+
+  16 |   }
+  17 | }
+> 18 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (18:0)
+
+  16 |   }
+  17 | }
+> 18 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (18:0)
+
+  16 |   }
+  17 | }
+> 18 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (23:0)
+
+  21 |   }
+  22 | }
+> 23 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (26:0)
+
+  24 |   }
+  25 | }
+> 26 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (30:0)
+
+  28 |   }
+  29 | }
+> 30 | 
+     | ^
+Failed to compile.
+
+./src/components/TeamList.js
+Module build failed: Error: ENOENT: no such file or directory, open '/Users/chiragjain/Documents/github/fedapp/src/components/TeamList.js'
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Module build failed: Error: ENOENT: no such file or directory, open '/Users/chiragjain/Documents/github/fedapp/src/components/TeamList.js'
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.jsx
+Syntax error: Unexpected token, expected { (30:0)
+
+  28 |   }
+  29 | }
+> 30 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Module not found: Can't resolve '../TeamList.js' in '/Users/chiragjain/Documents/github/fedapp/src/components/views'
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (49:0)
+
+  47 |   }
+  48 | }
+> 49 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (47:0)
+
+  45 |   }
+  46 | }
+> 47 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (45:0)
+
+  43 |   }
+  44 | }
+> 45 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+Syntax error: Unexpected token, expected { (43:0)
+
+  41 |   }
+  42 | }
+> 43 | 
+     | ^
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+92:28-36 "export 'default' (imported as 'TeamList') was not found in '../TeamList.js'
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+  Line 23:  'TodoItems' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/TeamList.js
+  Line 23:  'Team' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/Team.js
+  Line 26:  'TodoItems' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (5:8)
+
+  3 | 
+  4 | class TeamList extends React.Component {
+> 5 |   const Morning = () => (
+    |         ^
+  6 |     <div>
+  7 |       <h1>Morning projects</h1>
+  8 |       <div className="row">
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (6:6)
+
+  4 | class Morning extends React.Component {
+  5 | 
+> 6 |   this.state = {
+    |       ^
+  7 |     items: []
+  8 |   };
+  9 |
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+  Line 27:  'Team' is not defined  react/jsx-no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Module not found: Can't resolve './Team' in '/Users/chiragjain/Documents/github/fedapp/src/components/views'
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/views/Morning.js
+  Line 2:  'TeamList' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/views/Morning.js
+  Line 2:  'TeamList' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/views/Morning.js
+  Line 2:  'TeamList' is defined but never used  no-unused-vars
+
+./src/components/TeamList.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Failed to compile.
+
+./src/components/TeamList.js
+Module build failed: Error: ENOENT: no such file or directory, open '/Users/chiragjain/Documents/github/fedapp/src/components/TeamList.js'
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/js/fire.js
+  Line 11:  'fire' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (35:10)
+
+  33 |   }
+  34 | 
+> 35 |   document.addEventListener('DOMContentLoaded', function() {
+     |           ^
+  36 |     // Initialize Cloud Firestore through Firebase
+  37 |     var db = firebase.firestore();
+  38 |     db.collection("projects").get().then((querySnapshot) => {
+Compiling...
+Failed to compile.
+
+./src/js/fire.js
+  Line 11:  'fire' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/js/fire.js
+  Line 11:  'fire' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+  Line 37:  'firebase' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/js/fire.js
+Syntax error: Unexpected token, expected , (2:8)
+
+  1 | import firebase from 'firebase'
+> 2 | <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+    |         ^
+  3 | var config = {
+  4 | 		apiKey: "AIzaSyCmrV94B42rB-vDB_F0EJ_68dDPa2vN-qI",
+  5 | 		authDomain: "fedapp-ncsu.firebaseapp.com",
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Module not found: Can't resolve 'firebase-functions' in '/Users/chiragjain/Documents/github/fedapp/src/components/views'
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Module not found: Can't resolve 'firebase-functions' in '/Users/chiragjain/Documents/github/fedapp/src/components/views'
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Module not found: Can't resolve 'firebase-functions' in '/Users/chiragjain/Documents/github/fedapp/src/components/views'
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (35:6)
+
+  33 |   }
+  34 | 
+> 35 |   var db = fire.firestore();
+     |       ^
+  36 |   db.collection("projects").get().then((querySnapshot) => {
+  37 |       querySnapshot.forEach((doc) => {
+  38 |           this.state.items.add(`${doc.id}`);
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (36:4)
+
+  34 | 
+  35 |   db = fire.firestore();
+> 36 |   db.collection("projects").get().then((querySnapshot) => {
+     |     ^
+  37 |       querySnapshot.forEach((doc) => {
+  38 |           this.state.items.add(`${doc.id}`);
+  39 |           console.log(`${doc.id} => ${doc.data()}`);
+Compiling...
+Failed to compile.
+
+./src/components/views/Morning.js
+Syntax error: Unexpected token (36:4)
+
+  34 | 
+  35 |   db = fire.firestore()
+> 36 |   db.collection("projects").get().then((querySnapshot) => {
+     |     ^
+  37 |       querySnapshot.forEach((doc) => {
+  38 |           this.state.items.add(`${doc.id}`);
+  39 |           console.log(`${doc.id} => ${doc.data()}`);
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+
+=== Serving from '/Users/chiragjain/Documents/github/fedapp'...
+
+i  hosting: Serving hosting files from: build
+✔  hosting: Local server: http://localhost:5000
+
+127.0.0.1 - - [10/Oct/2017:18:31:12 +0000] "GET / HTTP/1.1" 200 545 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:12 +0000] "GET /static/css/main.15a333e8.css HTTP/1.1" 200 128418 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:12 +0000] "GET /static/js/main.69b5577c.js HTTP/1.1" 200 775971 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:13 +0000] "GET /favicon.ico HTTP/1.1" 200 3870 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:21 +0000] "GET / HTTP/1.1" 200 545 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:22 +0000] "GET /favicon.ico HTTP/1.1" 200 3870 "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:28 +0000] "GET /index HTTP/1.1" 200 545 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+127.0.0.1 - - [10/Oct/2017:18:31:33 +0000] "GET /morning HTTP/1.1" 200 545 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+
+> fedapp@0.1.0 start /Users/chiragjain/Documents/github/fedapp
+> react-scripts start
+
+Starting the development server...
+
+
+> fedapp@0.1.0 start /Users/chiragjain/Documents/github/fedapp
+> react-scripts start
+
+Something is already running on port 3000.
+
+> fedapp@0.1.0 start /Users/chiragjain/Documents/github/fedapp
+> react-scripts start
+
+Something is already running on port 3000.
+
+> fedapp@0.1.0 start /Users/chiragjain/Documents/github/fedapp
+> react-scripts start
+
+Starting the development server...
+
+Compiled with warnings.
+
+./src/components/App.js
+  Line 1:   'Component' is defined but never used           no-unused-vars
+  Line 2:   'fire' is defined but never used                no-unused-vars
+  Line 3:   'logo' is defined but never used                no-unused-vars
+  Line 8:   'Switch' is defined but never used              no-unused-vars
+  Line 8:   'Route' is defined but never used               no-unused-vars
+  Line 8:   'Link' is defined but never used                no-unused-vars
+  Line 13:  'bootstrap' is assigned a value but never used  no-unused-vars
+
+./src/js/fire.js
+  Line 2:  'firestore' is defined but never used  no-unused-vars
+
+./src/components/views/Footer.js
+  Line 2:  'Link' is defined but never used  no-unused-vars
+
+./src/components/Team.js
+  Line 1:  'Component' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.

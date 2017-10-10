@@ -1,0 +1,36 @@
+[debug] [2017-10-10T18:30:01.379Z] ----------------------------------------------------------------------
+[debug] [2017-10-10T18:30:01.381Z] Command:       /usr/local/Cellar/node/8.6.0/bin/node /usr/local/bin/firebase serve
+[debug] [2017-10-10T18:30:01.381Z] CLI Version:   3.13.1
+[debug] [2017-10-10T18:30:01.381Z] Platform:      darwin
+[debug] [2017-10-10T18:30:01.382Z] Node Version:  v8.6.0
+[debug] [2017-10-10T18:30:01.382Z] Time:          Tue Oct 10 2017 14:30:01 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:01.382Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-10-10T18:30:01.432Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-10-10T18:30:01.432Z] > authorizing via signed-in user
+[debug] [2017-10-10T18:30:01.434Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-10-10T18:30:01.434Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/WmTmG_bCbyGPar8Tddbgncn9B_R18JaxQ9rTms-AowM',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Oct 10 2017 14:30:01 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:01.581Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-10T18:30:01.621Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/fedapp-ncsu  
+ Tue Oct 10 2017 14:30:01 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:01.980Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-10T18:30:01.981Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/fedapp-ncsu/tokens  
+ Tue Oct 10 2017 14:30:01 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:02.458Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/chiragjain/Documents/github/fedapp'...
+[info] 
+[debug] [2017-10-10T18:30:02.467Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/fedapp-ncsu  
+ Tue Oct 10 2017 14:30:02 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:02.745Z] <<< HTTP RESPONSE 200
+[debug] [2017-10-10T18:30:02.745Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/793785966281/clients/_:getWebAppConfig  
+ Tue Oct 10 2017 14:30:02 GMT-0400 (EDT)
+[debug] [2017-10-10T18:30:03.176Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+
