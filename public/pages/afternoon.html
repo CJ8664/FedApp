@@ -106,7 +106,7 @@
 
             // Added listener on individual afternoon project
             afternoonTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(teamQrySnpSht){
-
+              var teamScores = [];
               // Get all the teams within the current project
               teamQrySnpSht.forEach(function(teamDoc) {
 
