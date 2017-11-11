@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Fedd | Morning Projects</title>
+    <title>Fedd | Afternoon Projects</title>
     <!-- JS dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
@@ -32,22 +32,22 @@
         </div>
         <ul class="nav navbar-nav">
           <li><a href="../index.html">Home</a></li>
-          <li class="active"><a href="#">Morning Projects</a></li>
-          <li><a href="afternoon.html">Afternoon Projects</a></li>
+          <li><a href="morning.html">Morning Projects</a></li>
+          <li class="active"><a href="#">Afternoon Projects</a></li>
         </ul>
       </div>
     </nav>
     <div class="container" style="margin-top:60px;">
       <div class="row">
         <div class="col-lg-3" id="projects">
-          <!-- left div contains the list of all morning projects -->
+          <!-- left div contains the list of all afternoon projects -->
           <div class='panel panel-primary'>
             <div class='panel-heading'><h3 class='panel-title'>Projects</h3></div>
-            <ul id="morning_projects" class="list-group"></ul>
+            <ul id="afternoon_projects" class="list-group"></ul>
           </div>
         </div>
-        <div class="col-lg-9" id="morning_project_details">
-          <!-- right div contains the teams within the highlighted morning project -->
+        <div class="col-lg-9" id="afternoon_project_details">
+          <!-- right div contains the teams within the highlighted afternoon project -->
         </div>
       </div>
     </div>
@@ -75,21 +75,21 @@
       // Get the projects under the 'projects collection'
       projectsCollection.get().then(function(allPrjQrySnpSht) {
 
-        // For each project get the teams that are participating in morning
+        // For each project get the teams that are participating in afternoon
         allPrjQrySnpSht.forEach(function(projectDocSnpSht) {
 
-            // This actually gets the morning teams for a particular project type
-            var morningTeamCollection = masterDB.collection("Projects/" + projectDocSnpSht.id +"/Morning");
+            // This actually gets the afternoon teams for a particular project type
+            var afternoonTeamCollection = masterDB.collection("Projects/" + projectDocSnpSht.id +"/Afternoon");
 
             // Convert the project id to snakecase eg: 3D Printing => 3d_printing
             var prjId = projectDocSnpSht.id.toLowerCase().split(' ').join('_');
 
             // Append a list item for each project on the left hand side of page
-            $("#morning_projects").append("<li class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
+            $("#afternoon_projects").append("<li class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
 
             // Add panel to display all teams under the current project being referenced in the loop
             // Create an table to show all the teams under the current project being referenced in the loop
-            $("#morning_project_details").append("<div id='panel_" + prjId + "' class='panel panel-primary'>" +
+            $("#afternoon_project_details").append("<div id='panel_" + prjId + "' class='panel panel-primary'>" +
               "<div class='panel-heading'><h3 class='panel-title'>" + projectDocSnpSht.id + "</h3></div>" +
               "<table id='panel_" + prjId + "_table' class='table'>" +
               "<thead><tr><th>#</th><th>Team Name</th><th>Score</th></tr></thead>" +
@@ -102,8 +102,8 @@
             // Add the project 'div' ids to the array, used to update view
             prjTeamDisplayIds.push(prjId);
 
-            // Added listener on individual morning project
-            morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
+            // Added listener on individual afternoon project
+            afternoonTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
 
               // Get all the teams within the current project
               mrnTmQrySnpSht.forEach(function(teamDoc) {
