@@ -84,15 +84,16 @@
             $("#morning_projects").append("<li class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
 
             // Add panel to display all teams under the current project being referenced in the loop
+            // Create an table to show all the teams under the current project being referenced in the loop
             $("#morning_project_details").append("<div id='panel_" + prjId + "' class='panel panel-primary'>" +
               "<div class='panel-heading'><h3 class='panel-title'>" + projectDocSnpSht.id + "</h3></div>" +
-              "<div id='panel_" + prjId + "_body' class='panel-body'></div></div>");
+              "<table id='panel_" + prjId + "_table' class='table'>" +
+              "<thead><tr><th>Team Name</th><th>Score</th></tr></thead>" +
+              "<tbody id='project_"+ prjId +"_tbody'></tbody></table>" +
+              "</div>");
 
             // Hide the teams and only show score of one project at a time
             $("#panel_" + prjId).hide();
-
-            // Create an list to show all the teams under the current project being referenced in the loop
-            $("#panel_" + prjId + "_body").append("<ul id='project_"+ prjId +"_list' ></ul>");
 
             // Add the project 'div' ids to the array, used to update view
             prjTeamDisplayIds.push(prjId);
@@ -113,7 +114,7 @@
                 }
 
                 // Create a new team list item to show the score
-                $("#project_"+ prjId +"_list").append("<li class='list-group-item' id='" + prjId+"_"+teamId + "'>" + teamDoc.id + " | " + teamDoc.data().Total + "</li>");
+                $("#project_"+ prjId +"_tbody").append("<tr id='" + prjId+"_"+teamId + "'><td>" + teamDoc.id + "</td><td>" + teamDoc.data().Total + "</td></tr>");
               })
             })
         });
