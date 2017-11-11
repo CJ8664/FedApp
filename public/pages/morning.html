@@ -105,11 +105,10 @@
             prjTeamDisplayIds.push(prjId);
 
             // Added listener on individual morning project
-            morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
-
+            morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(teamQrySnpSht){
+              var teamScores = [];
               // Get all the teams within the current project
-              mrnTmQrySnpSht.forEach(function(teamDoc) {
-
+              teamQrySnpSht.forEach(function(teamDoc) {
                 // Convert the team id to snakecase
                 var teamId = teamDoc.id.toLowerCase().split(' ').join('_');
 
@@ -120,8 +119,21 @@
                 }
 
                 // Create a new team list item to show the score
-                $("#project_"+ prjId +"_tbody").append("<tr id='" + prjId+"_"+teamId + "'><td>1</td><td>" + teamDoc.id + "</td><td>" + teamDoc.data().Total + "</td></tr>");
+                teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.id + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
               })
+
+              // Sort the scores and append to leaderboard
+              teamScores.sort(function(a, b){
+                return b.score - a.score;
+              });
+
+              // Add the table rows with rank
+              var rank = 1;
+              teamScores.forEach(function(liInfo) {
+                $("#project_"+ prjId +"_tbody").append(liInfo.liDom.replace('%rnk%',rank));
+                rank += 1;
+              });
+
             })
         });
       });
@@ -133,7 +145,7 @@
         currPrjId = prjTeamDisplayIds[prjTeamDisplayIdx];
         currPrjListId = "#panel_"+ currPrjId;
 
-        console.log(currPrjListId);
+        //console.log(currPrjListId);
 
         if(prevPrjId != null) {
           // Hide the teams for other project
@@ -161,7 +173,7 @@
       setInterval(function(){
         // Call the update view method every 10 seconds
         updateView();
-      }, 10000);
+      }, 5000);
     });
 
   </script>
