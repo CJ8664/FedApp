@@ -3,12 +3,14 @@
     <title>Fedd | Morning Projects</title>
     <!-- JS dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/fire.js"></script>
     <!-- CSS scripts -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
     <!-- Start of Google Analytics code -->
     <script type="text/javascript">
 
@@ -137,14 +139,14 @@
           // Hide the teams for other project
           $(prevPrjListId).hide();
           // Remove higlighting
-          $("#"+prevPrjId).removeClass('active');
+          $("#"+prevPrjId).toggleClass('active', 700);
         }
 
         if(currPrjId != null){
           // Show the teams for current project
-          $(currPrjListId).show();
+          $(currPrjListId).show('blind');
           // Highlight the left navigation
-          $("#"+currPrjId).addClass('active');
+          $("#"+currPrjId).toggleClass('active', 700);
         }
 
         // Update cyclic counter
