@@ -1,21 +1,60 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <title>FedApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="js/fire.js"></script>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
+    <div id="projects">
+      <ul id="morning_projects"></ul>
+    </div>
+    <div id="morning_project_details">
+
+    </div>
   </body>
+  <script>
+    $(document).ready(function(){
+      // Get all the data and populate the page
+      var masterDB = fire.firestore();
+      var projectsCollection = masterDB.collection("Projects");
+
+      var prjTeamDisplayIdx = 0;
+      var prjTeamDisplayIds = [];
+
+      projectsCollection.get().then(function(allPrjQrySnpSht) {
+        allPrjQrySnpSht.forEach(function(projectDocSnpSht) {
+
+            var morningTeamCollection = masterDB.collection("Projects/" + projectDocSnpSht.id +"/Morning");
+            var prjId = projectDocSnpSht.id.toLowerCase().replace(' ','_');
+            $("#morning_projects").append("<li id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
+            $("#morning_project_details").append("<ul id='project_"+ prjId +"_list' ></ul>");
+            prjTeamDisplayIds.push("project_"+ prjId +"_list");
+            $("#project_"+ prjId +"_list").hide();
+            morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
+              mrnTmQrySnpSht.forEach(function(teamDoc) {
+                var teamId = teamDoc.id.toLowerCase().replace(' ','_');
+                if($("#"+prjId+"_"+teamId).get(0)){
+                  $("#"+prjId+"_"+teamId).remove();
+                }
+                $("#project_"+ prjId +"_list").append("<li id='" + prjId+"_"+teamId + "'>" + teamDoc.id + " | " + teamDoc.data().Total + "</li>");
+                console.log(teamDoc.id, " => ", teamDoc.data().Total);
+              })
+            })
+        });
+      });
+
+      function updateView(){
+        //alert(prjTeamDisplayIds[prjTeamDisplayIdx]);
+        $("#"+prjTeamDisplayIds[prjTeamDisplayIdx-1]).hide();
+        $("#"+prjTeamDisplayIds[prjTeamDisplayIdx]).show();
+        prjTeamDisplayIdx = (prjTeamDisplayIdx + 1)%prjTeamDisplayIds.length;
+      }
+
+      setInterval(function(){
+        updateView();
+      }, 3000);
+
+    });
+  </script>
 </html>
