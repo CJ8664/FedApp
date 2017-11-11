@@ -24,17 +24,29 @@
     <!-- End of Google Analytics code -->
   </head>
   <body>
-
-    <!-- left div contains the list of all morning projects -->
-    <div id="projects">
-      <ul id="morning_projects"></ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Fed Day leaderboard</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li class="active"><a href="#">Morning Projects</a></li>
+          <li><a href="afternoon.html">Afternoon Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="margin-top:60px;">
+      <div class="row">
+        <div class="col-lg-3" id="projects">
+          <!-- left div contains the list of all morning projects -->
+          <ul id="morning_projects" class="list-group"></ul>
+        </div>
+        <div class="col-lg-9" id="morning_project_details">
+          <!-- right div contains the teams within the highlighted morning project -->
+        </div>
+      </div>
     </div>
-
-    <!-- right div contains the teams within the highlighted morning project -->
-    <div id="morning_project_details">
-
-    </div>
-
   </body>
   <script>
     $(document).ready(function(){
@@ -50,6 +62,12 @@
       var prjTeamDisplayIdx = 0;
       var prjTeamDisplayIds = [];
 
+      var currPrjId;
+      var currPrjListId;
+
+      var prevPrjId;
+      var prevPrjListId;
+
       // Get the projects under the 'projects collection'
       projectsCollection.get().then(function(allPrjQrySnpSht) {
 
@@ -63,16 +81,21 @@
             var prjId = projectDocSnpSht.id.toLowerCase().replace(' ','_');
 
             // Append a list item for each project on the left hand side of page
-            $("#morning_projects").append("<li id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
+            $("#morning_projects").append("<li class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
 
-            // Create an list to show all the teams under the current project being referenced in the loop
-            $("#morning_project_details").append("<ul id='project_"+ prjId +"_list' ></ul>");
-
-            // Add the project 'div' ids to the array, used to update view
-            prjTeamDisplayIds.push("project_"+ prjId +"_list");
+            // Add panel to display all teams under the current project being referenced in the loop
+            $("#morning_project_details").append("<div id='panel_" + prjId + "' class='panel panel-primary'>" +
+              "<div class='panel-heading'><h3 class='panel-title'>" + projectDocSnpSht.id + "</h3></div>" +
+              "<div id='panel_" + prjId + "_body' class='panel-body'></div></div>");
 
             // Hide the teams and only show score of one project at a time
-            $("#project_"+ prjId +"_list").hide();
+            $("#panel_" + prjId).hide();
+
+            // Create an list to show all the teams under the current project being referenced in the loop
+            $("#panel_" + prjId + "_body").append("<ul id='project_"+ prjId +"_list' ></ul>");
+
+            // Add the project 'div' ids to the array, used to update view
+            prjTeamDisplayIds.push(prjId);
 
             // Added listener on individual morning project
             morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
@@ -90,7 +113,7 @@
                 }
 
                 // Create a new team list item to show the score
-                $("#project_"+ prjId +"_list").append("<li id='" + prjId+"_"+teamId + "'>" + teamDoc.id + " | " + teamDoc.data().Total + "</li>");
+                $("#project_"+ prjId +"_list").append("<li class='list-group-item' id='" + prjId+"_"+teamId + "'>" + teamDoc.id + " | " + teamDoc.data().Total + "</li>");
               })
             })
         });
@@ -98,16 +121,40 @@
 
       // Method to update the view periodically
       function updateView(){
-        $("#"+prjTeamDisplayIds[prjTeamDisplayIdx-1]).hide();
-        $("#"+prjTeamDisplayIds[prjTeamDisplayIdx]).show();
+
+        // Get the current project
+        currPrjId = prjTeamDisplayIds[prjTeamDisplayIdx];
+        currPrjListId = "#panel_"+ currPrjId;
+
+        console.log(currPrjListId);
+
+        if(prevPrjId != null) {
+          // Hide the teams for other project
+          $(prevPrjListId).hide();
+          // Remove higlighting
+          $("#"+prevPrjId).removeClass('active');
+        }
+
+        if(currPrjId != null){
+          // Show the teams for current project
+          $(currPrjListId).show();
+          // Highlight the left navigation
+          $("#"+currPrjId).addClass('active');
+        }
+
+        // Update cyclic counter
         prjTeamDisplayIdx = (prjTeamDisplayIdx + 1)%prjTeamDisplayIds.length;
+
+        // Update prev references
+        prevPrjId = currPrjId;
+        prevPrjListId = currPrjListId;
       }
 
       // This does not poll data, this just changes the views to show score by each project
       setInterval(function(){
-        // Call the update view method every 3 seconds
+        // Call the update view method every 10 seconds
         updateView();
-      }, 3000);
+      }, 10000);
     });
 
   </script>
