@@ -6,55 +6,91 @@
     <script src="js/fire.js"></script>
   </head>
   <body>
+
+    <!-- left div contains the list of all morning projects -->
     <div id="projects">
       <ul id="morning_projects"></ul>
     </div>
+
+    <!-- right div contains the teams within the highlighted morning project -->
     <div id="morning_project_details">
 
     </div>
+
   </body>
   <script>
     $(document).ready(function(){
       // Get all the data and populate the page
+
+      // Initialize the firestore config
       var masterDB = fire.firestore();
+
+      // Get all the projects
       var projectsCollection = masterDB.collection("Projects");
 
+      // Data objects to help update view periodically
       var prjTeamDisplayIdx = 0;
       var prjTeamDisplayIds = [];
 
+      // Get the projects under the 'projects collection'
       projectsCollection.get().then(function(allPrjQrySnpSht) {
+
+        // For each project get the teams that are participating in morning
         allPrjQrySnpSht.forEach(function(projectDocSnpSht) {
 
+            // This actually gets the morning teams for a particular project type
             var morningTeamCollection = masterDB.collection("Projects/" + projectDocSnpSht.id +"/Morning");
+
+            // Convert the project id to snakecase eg: 3D Printing => 3d_printing
             var prjId = projectDocSnpSht.id.toLowerCase().replace(' ','_');
+
+            // Append a list item for each project on the left hand side of page
             $("#morning_projects").append("<li id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
+
+            // Create an list to show all the teams under the current project being referenced in the loop
             $("#morning_project_details").append("<ul id='project_"+ prjId +"_list' ></ul>");
+
+            // Add the project 'div' ids to the array, used to update view
             prjTeamDisplayIds.push("project_"+ prjId +"_list");
+
+            // Hide the teams and only show score of one project at a time
             $("#project_"+ prjId +"_list").hide();
+
+            // Added listener on individual morning project
             morningTeamCollection.onSnapshot({includeDocumentMetadataChanges: true}, function(mrnTmQrySnpSht){
+
+              // Get all the teams within the current project
               mrnTmQrySnpSht.forEach(function(teamDoc) {
+
+                // Convert the team id to snakecase
                 var teamId = teamDoc.id.toLowerCase().replace(' ','_');
+
+                // In case of an update to the team score, check if it is already rendered on page
+                // If yes, remove the list item so that the newly updates score is shown
                 if($("#"+prjId+"_"+teamId).get(0)){
                   $("#"+prjId+"_"+teamId).remove();
                 }
+
+                // Create a new team list item to show the score
                 $("#project_"+ prjId +"_list").append("<li id='" + prjId+"_"+teamId + "'>" + teamDoc.id + " | " + teamDoc.data().Total + "</li>");
-                console.log(teamDoc.id, " => ", teamDoc.data().Total);
               })
             })
         });
       });
 
+      // Method to update the view periodically
       function updateView(){
-        //alert(prjTeamDisplayIds[prjTeamDisplayIdx]);
         $("#"+prjTeamDisplayIds[prjTeamDisplayIdx-1]).hide();
         $("#"+prjTeamDisplayIds[prjTeamDisplayIdx]).show();
         prjTeamDisplayIdx = (prjTeamDisplayIdx + 1)%prjTeamDisplayIds.length;
       }
 
+      // This does not poll data, this just changes the views to show score by each project
       setInterval(function(){
+        // Call the update view method every 3 seconds
         updateView();
       }, 3000);
-
     });
+
   </script>
 </html>
