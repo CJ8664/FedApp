@@ -98,7 +98,7 @@
             var prjId = projectDocSnpSht.id.toLowerCase().split(' ').join('_');
 
             // Append a list item for each project on the left hand side of page
-            $("#morning_projects").append("<li onclick=toggleAutoplay('" + prjId + "'); " +
+            $("#afternoon_projects").append("<li onclick=toggleAutoplay('" + prjId + "'); " +
               "style='cursor: pointer'; " +
               "class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
 
