@@ -134,7 +134,7 @@
 
                 // Create a new team list item to show the score
                 if(teamDoc.data().Total == null){ // If score is not available
-                  teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
+                  teamScores.push({score: 0, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
                 } else { // If score is available
                   teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
                 }
