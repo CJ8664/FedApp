@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Fedd | Morning Projects</title>
+    <title>FEDD | Morning Projects</title>
     <!-- JS dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top ">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Fed Day leaderboard</a>
+          <a class="navbar-brand" href="#">FEDD Day leaderboard</a>
         </div>
         <ul class="nav navbar-nav">
           <li><a href="../index.html">Home</a></li>
@@ -119,7 +119,11 @@
                 }
 
                 // Create a new team list item to show the score
-                teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.id + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                if(teamDoc.data().Total == null){ // If score is not available
+                  teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
+                } else { // If score is available
+                  teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                }
               })
 
               // Sort the scores and append to leaderboard
