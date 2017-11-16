@@ -30,7 +30,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top ">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">FEDD Day leaderboard</a>
+          <a class="navbar-brand" href="#">FEDD leaderboard</a>
         </div>
         <ul class="nav navbar-nav">
           <li><a href="../index.html">Home</a></li>
@@ -44,7 +44,11 @@
         <div class="col-lg-3" id="projects">
           <!-- left div contains the list of all afternoon projects -->
           <div class='panel panel-primary'>
-            <div class='panel-heading'><h3 class='panel-title'>Projects</h3></div>
+            <div class='panel-heading'>
+              <h3 class='panel-title'>Projects
+                <a href="#" data-toggle="tooltip" title="Click on any project to pause autoplay"><span class="glyphicon glyphicon-info-sign"></span></a>
+              </h3>
+            </div>
             <ul id="afternoon_projects" class="list-group"></ul>
           </div>
         </div>
@@ -55,24 +59,31 @@
     </div>
   </body>
   <script>
+
+    // Data objects to help update view periodically
+    var prjTeamDisplayIdx = 0;
+    var prjTeamDisplayIds = [];
+
+    var currPrjId;
+    var currPrjListId;
+
+    var prevPrjId;
+    var prevPrjListId;
+
+    // Flag to store autoplay status
+    var autoplay = true;
+
     $(document).ready(function(){
       // Get all the data and populate the page
+
+      // Set autoplay tooltip
+      $('[data-toggle="tooltip"]').tooltip();
 
       // Initialize the firestore config
       var masterDB = fire.firestore();
 
       // Get all the projects
       var projectsCollection = masterDB.collection("Projects");
-
-      // Data objects to help update view periodically
-      var prjTeamDisplayIdx = 0;
-      var prjTeamDisplayIds = [];
-
-      var currPrjId;
-      var currPrjListId;
-
-      var prevPrjId;
-      var prevPrjListId;
 
       // Get the projects under the 'projects collection'
       projectsCollection.get().then(function(allPrjQrySnpSht) {
@@ -87,7 +98,9 @@
             var prjId = projectDocSnpSht.id.toLowerCase().split(' ').join('_');
 
             // Append a list item for each project on the left hand side of page
-            $("#afternoon_projects").append("<li class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
+            $("#morning_projects").append("<li onclick=toggleAutoplay('" + prjId + "'); " +
+              "style='cursor: pointer'; " +
+              "class='list-group-item' id='" + prjId + "'>" + projectDocSnpSht.id + "</li>");
 
             // Add panel to display all teams under the current project being referenced in the loop
             // Create an table to show all the teams under the current project being referenced in the loop
@@ -143,43 +156,64 @@
         });
       });
 
-      // Method to update the view periodically
-      function updateView(){
-
-        // Get the current project
-        currPrjId = prjTeamDisplayIds[prjTeamDisplayIdx];
-        currPrjListId = "#panel_"+ currPrjId;
-
-        //console.log(currPrjListId);
-
-        if(prevPrjId != null) {
-          // Hide the teams for other project
-          $(prevPrjListId).hide();
-          // Remove higlighting
-          $("#"+prevPrjId).toggleClass('active', 700);
-        }
-
-        if(currPrjId != null){
-          // Show the teams for current project
-          $(currPrjListId).show('blind');
-          // Highlight the left navigation
-          $("#"+currPrjId).toggleClass('active', 700);
-        }
-
-        // Update cyclic counter
-        prjTeamDisplayIdx = (prjTeamDisplayIdx + 1)%prjTeamDisplayIds.length;
-
-        // Update prev references
-        prevPrjId = currPrjId;
-        prevPrjListId = currPrjListId;
-      }
-
       // This does not poll data, this just changes the views to show score by each project
       setInterval(function(){
-        // Call the update view method every 10 seconds
-        updateView();
+        // Call the update view method every 10 seconds if autoplay is on
+        if (autoplay){
+          updateView();
+        }
       }, 5000);
     });
+
+    // Method to update the view periodically
+    function updateView(){
+
+      // Get the current project
+      currPrjId = prjTeamDisplayIds[prjTeamDisplayIdx];
+      currPrjListId = "#panel_"+ currPrjId;
+
+      if(prevPrjId != null) {
+        // Hide the teams for other project
+        $(prevPrjListId).hide();
+        // Remove higlighting
+        $("#"+prevPrjId).toggleClass('active', 700);
+      }
+
+      if(currPrjId != null){
+        // Show the teams for current project
+        $(currPrjListId).show('blind');
+        // Highlight the left navigation
+        $("#"+currPrjId).toggleClass('active', 700);
+      }
+
+      // Update cyclic counter
+      prjTeamDisplayIdx = (prjTeamDisplayIdx + 1)%prjTeamDisplayIds.length;
+
+      // Update prev references
+      prevPrjId = currPrjId;
+      prevPrjListId = currPrjListId;
+    }
+
+    // fucntion to toggle autoplay
+    function toggleAutoplay(projectId){
+      if (autoplay){
+        autoplay = false;
+        alert('Click again on the highlighted project to resume autoplay.');
+      } else {
+        autoplay = true;
+      }
+
+      // Get the index of clicked project and update view
+      var idx = 0;
+      for(var pId of prjTeamDisplayIds) {
+        if(pId == projectId){
+          prjTeamDisplayIdx = idx;
+          updateView();
+          break;
+        }
+        idx += 1;
+      }
+    }
 
   </script>
 </html>
