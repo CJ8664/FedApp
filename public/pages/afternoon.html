@@ -122,7 +122,6 @@
               var teamScores = [];
               // Get all the teams within the current project
               teamQrySnpSht.forEach(function(teamDoc) {
-
                 // Convert the team id to snakecase
                 var teamId = teamDoc.id.toLowerCase().split(' ').join('_');
 
@@ -132,13 +131,54 @@
                   $("#"+prjId+"_"+teamId).remove();
                 }
 
-                // Create a new team list item to show the score
-                if(teamDoc.data().Total == null){ // If score is not available
-                  teamScores.push({score: 0, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
-                } else { // If score is available
-                  teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                if(prjId == "hovercraft"){ // Special calculation for hovercraft
+                  if(teamDoc.data().Total == null || teamDoc.data().Total == -1000){ // If score is not available
+                    teamScores.push({score: -100000, hovercraft: 100000, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>--</i></td></tr>"});
+                  } else {
+                    teamScores.push({score: teamDoc.data().Total, hovercraft: teamDoc.data().Hovercraft, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>%racepos%</td></tr>"});
+                  }
+                } else {
+                  // Normal calculation for other projects
+                  // Create a new team list item to show the score
+                  if(teamDoc.data().Total == null){ // If score is not available
+                    teamScores.push({score: 0, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
+                  } else { // If score is available
+                    teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                  }
                 }
               })
+
+              if(prjId == "hovercraft"){ // Special calculation for hovercraft
+                // Sort based on race time
+                teamScores.sort(function(a, b){
+                  return a.hovercraft - b.hovercraft;
+                });
+
+                // Max points for the first position
+                var racepoint = 200;
+                var idx = 0;
+                var prevTime = 0;
+                var rank = 1;
+
+                // Assign Race points
+                teamScores.forEach(function(liInfo) {
+
+                  // Hovercraft 0 means no points from race
+                  if (liInfo.hovercraft == 0) {
+                    liInfo.liDom = liInfo.liDom.replace('%racepos%',liInfo.score);
+                  } else {
+                    // If the time is not the previous best | idx == 0 gives first position 200 points
+                    if (idx != 0 && liInfo.hovercraft != prevTime){
+                      racepoint -= 5;
+                    }
+                    // Save the current time for next iteration
+                    prevTime = liInfo.hovercraft;
+                    liInfo.score += racepoint
+                    liInfo.liDom = liInfo.liDom.replace('%racepos%',liInfo.score);
+                    idx +=1;
+                  }
+                });
+              }
 
               // Sort the scores and append to leaderboard
               teamScores.sort(function(a, b){
