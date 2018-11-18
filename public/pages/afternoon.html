@@ -10,6 +10,7 @@
     <script src="../js/fire.js"></script>
     <!-- CSS scripts -->
     <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
     <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
     <!-- Start of Google Analytics code -->
     <script type="text/javascript">
@@ -46,7 +47,11 @@
           <div class='panel panel-primary'>
             <div class='panel-heading'>
               <h3 class='panel-title'>Projects
-                <a href="#" data-toggle="tooltip" title="Click on any project to pause autoplay"><span class="glyphicon glyphicon-info-sign"></span></a>
+                <div class="pull-right" id="autoplayToggle">
+                    <p class="pull-left" style="margin-left: -50px; font-size: 12px">Autoplay</p>
+                    <input class="tgl tgl-ios" id="autoplayToggleBtn"  type="checkbox"/>
+                    <label class="tgl-btn" for="autoplayToggleBtn"></label>
+                </div>
               </h3>
             </div>
             <ul id="afternoon_projects" class="list-group"></ul>
@@ -195,6 +200,14 @@
             })
         });
       });
+        
+      // Start toggle switch in ON position'
+      $('#autoplayToggleBtn').prop("checked", autoplay);
+        
+      // Toggle autoplay for toggle switch
+      $('#autoplayToggleBtn').change(function() {
+        autoplay = !autoplay;
+      });
 
       // This does not poll data, this just changes the views to show score by each project
       setInterval(function(){
@@ -236,12 +249,8 @@
 
     // fucntion to toggle autoplay
     function toggleAutoplay(projectId){
-      if (autoplay){
-        autoplay = false;
-        alert('Click again on the highlighted project to resume autoplay.');
-      } else {
-        autoplay = true;
-      }
+      autoplay = false;
+      $('#autoplayToggleBtn').prop("checked", autoplay);
 
       // Get the index of clicked project and update view
       var idx = 0;
