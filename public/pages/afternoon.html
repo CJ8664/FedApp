@@ -11,7 +11,8 @@
     <!-- CSS scripts -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/app.css" rel="stylesheet">
-    <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Start of Google Analytics code -->
     <script type="text/javascript">
 
@@ -140,7 +141,18 @@
                   if(teamDoc.data().Total == null || teamDoc.data().Total == -1000){ // If score is not available
                     teamScores.push({score: -100000, hovercraft: 100000, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>--</i></td></tr>"});
                   } else {
-                    teamScores.push({score: teamDoc.data().Total, hovercraft: teamDoc.data().Hovercraft, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>%racepos%</td></tr>"});
+                    // Create HTML for Awards attribute
+                    var awardTD = "";
+                    if(teamDoc.data().Award == "1st Place") {
+                      awardTD = "<i class='award-gold fa fa-trophy'></i> 1st Place";
+                    } else if (teamDoc.data().Award == "2nd Place") {
+                      awardTD = "<i class='award-silver fa fa-trophy'></i> 2nd Place";
+                    } else if (teamDoc.data().Award == "3rd Place") {
+                      awardTD = "<i class='award-bronze fa fa-trophy'></i> 3rd Place";
+                    } else if (teamDoc.data().Award == "Honorable Mention") {
+                      awardTD = "<i class='award-honorable-mention fa fa-trophy'></i> Honorable Mention";
+                    }
+                    teamScores.push({score: teamDoc.data().Total, hovercraft: teamDoc.data().Hovercraft, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + " " + awardTD + "</td><td>%racepos%</td></tr>"});
                   }
                 } else {
                   // Normal calculation for other projects
@@ -148,7 +160,18 @@
                   if(teamDoc.data().Total == null){ // If score is not available
                     teamScores.push({score: 0, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td><i>Not available</i></td></tr>"});
                   } else { // If score is available
-                    teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                    // Create HTML for Awards attribute
+                    var awardTD = "";
+                    if(teamDoc.data().Award == "1st Place") {
+                      awardTD = "<i class='award-gold fa fa-trophy'></i> 1st Place";
+                    } else if (teamDoc.data().Award == "2nd Place") {
+                      awardTD = "<i class='award-silver fa fa-trophy'></i> 2nd Place";
+                    } else if (teamDoc.data().Award == "3rd Place") {
+                      awardTD = "<i class='award-bronze fa fa-trophy'></i> 3rd Place";
+                    } else if (teamDoc.data().Award == "Honorable Mention") {
+                      awardTD = "<i class='award-honorable-mention fa fa-trophy'></i> Honorable Mention";
+                    }
+                    teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + " " + awardTD + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
                   }
                 }
               })
@@ -200,10 +223,10 @@
             })
         });
       });
-        
+
       // Start toggle switch in ON position'
       $('#autoplayToggleBtn').prop("checked", autoplay);
-        
+
       // Toggle autoplay for toggle switch
       $('#autoplayToggleBtn').change(function() {
         autoplay = !autoplay;

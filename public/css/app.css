@@ -69,3 +69,19 @@
 .tgl-ios:checked + .tgl-btn:active:after {
   margin-left: -.8em;
 }
+.award-gold {
+  color: #FFDF00;
+  text-shadow: 1px 1px #888;
+}
+.award-silver {
+  color: #C0C0C0;
+  text-shadow: 1px 1px #888;
+}
+.award-bronze {
+  color: #CD7F32;
+  text-shadow: 1px 1px #888;
+}
+.award-honorable-mention {
+  color: #4169E1;
+  text-shadow: 1px 1px #888;
+}
