@@ -171,7 +171,7 @@
                     } else if (teamDoc.data().Award == "Honorable Mention") {
                       awardTD = "<i class='award-honorable-mention fa fa-trophy'></i> Honorable Mention";
                     }
-                    teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + " " + awardTD + "</td><td>" + teamDoc.data().Total + "</td></tr>"});
+                    teamScores.push({score: teamDoc.data().Total, liDom :"<tr id='" + prjId+"_"+teamId + "'><td>%rnk%</td><td>" + teamDoc.data().Name + " " + awardTD + "</td><td>" + Math.round(teamDoc.data().Total * 1000)/1000 + "</td></tr>"});
                   }
                 }
               })
